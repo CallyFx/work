@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Веселое анкетирование </title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="main" id="all">
+    <script src="js/script.js"></script>
+    <a href="javascript:void(0);" class="icon-burger" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav class="menu">
+      <ul class="menu-list" id="menu">
+        <li class="menu-list-item">
+          <a href="#" class="menu-list-item-link" rel="noopener noreferrer">Личная информация</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="#" class="menu-list-item-link" rel="noopener noreferrer">Опыт</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="#" class="menu-list-item-link" rel="noopener noreferrer">JavaScript</a>
+        </li>
+        <li class="menu-list-item">
+          <a href="#" class="menu-list-item-link" rel="noopener noreferrer">О себе</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="form-section">
+      <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" class="form">
+        <h1 class="anketa"> Анкета </h1>
+        <div class="zagolov">
+          <span class="form-icon one"></span>
+          <label class="form-header"> Личная информация </label>
+        </div>
+        <div class="inputs-flex">
+          <input type="text" required id="name" placeholder="ФИО" name="личная-инфо" class="form-input-fio">
+          <select name="year" class="form-select">
+            <option value="" class="options"> Год рождения </option>
+            <option value="2000"> 2000 </option>
+            <option value="1993"> 1993 </option>
+            <option value="199"> 1996 </option>
+            <option value="199"> 1996 </option>
+            <option value="199"> 1996 </option>
+            <option value="199"> 1996 </option>
+            <option value="199"> 1996 </option>
+            <option value="199"> 1996 </option>
+            <option value="199"> 1996 </option>
+            <option value="199"> 1996 </option>
+            <option value="199"> 1996 </option>
+            <option value="199"> 1996 </option>
+            <option value="199"> 1996 </option>
+          </select>
+          <input type="text" name="Гдеживет" placeholder="Место проживания" class="form-input-fio">
+          <input type="text" name="Skype" placeholder="Skype" class="form-input-fio">
+          <input type="text" name="E-mail" placeholder="E-mail" class="form-input-fio">
+        </div>
+        <div class="zagolov">
+          <span class="form-icon two"></span>
+          <label class="form-header"> Расскажите о своем опыте </label>
+        </div>
+        <div class="form-checkbox-container">
+          <div class="form-checkbox-container-block">
+            <div class="form-checkbox-container-block-stroke">
+              <input type="checkbox" name="БЭМ/OOCSS" class="form-input-checkbox">
+              <span class="form-input-checkbox-info">БЭМ/OOCSS</span>
+            </div>
+            <div class="form-checkbox-container-block-stroke">
+              <input type="checkbox" name="Stylus/LESS/SASS" class="form-input-checkbox">
+              <span class="form-input-checkbox-info">Stylus/LESS/SASS</span>
+            </div>
+            <div class="form-checkbox-container-block-stroke">
+              <input type="checkbox" name="Работаю с SVG" class="form-input-checkbox">
+              <span class="form-input-checkbox-info">Работаю с SVG</span>
+            </div>
+          </div>
+          <div class="form-checkbox-container-block">
+            <div class="form-checkbox-container-block-stroke">
+              <input type="checkbox" name="Верстаю семантично" class="form-input-checkbox">
+              <span class="form-input-checkbox-info">Верстаю семантично</span>
+            </div>
+            <div class="form-checkbox-container-block-stroke">
+              <input type="checkbox" name="ES2015/ES2016" class="form-input-checkbox">
+              <span class="form-input-checkbox-info">ES2015/ES2016</span>
+            </div>
+            <div class="form-checkbox-container-block-stroke">
+              <input type="checkbox" name="Gulp/GRUNT" class="form-input-checkbox">
+              <span class="form-input-checkbox-info">Gulp/GRUNT</span>
+            </div>
+          </div>
+          <div class="form-checkbox-container-block">
+            <div class="form-checkbox-container-block-stroke">
+              <input type="checkbox" name="Webpack" class="form-input-checkbox">
+              <span class="form-input-checkbox-info">Webpack</span>
+            </div>
+            <div class="form-checkbox-container-block-stroke">
+              <input type="checkbox" name="jQuery" class="form-input-checkbox">
+              <span class="form-input-checkbox-info">jQuery</span>
+            </div>
+            <div class="form-checkbox-container-block-stroke">
+              <input type="checkbox" name="Использую Git" class="form-input-checkbox">
+              <span class="form-input-checkbox-info">Использую Git</span>
+            </div>
+          </div>
+        </div>
+        <div class="zagolov">
+          <span class="form-icon four"></span>
+          <label class="form-header"> Уровень владения JavaScript </label>
+        </div>
+        <div class="js-form">
+          <span class="js-form-article"> Не владею </span>
+          <span class="js-form-article"> Использую готовые решения </span>
+          <span class="js-form-article"> Использую готовые решения и умею их переделывать </span>
+          <span class="js-form-article"> Пишу сложный JS с нуля </span>
+        </div>
+
+        <input type="range" min="1" max="4" step="1" value="2" class="js-form-slider">
+
+        <div class="zagolov">
+          <span class="form-icon three"></span>
+          <label class="form-header"> Расскажите о себе </label>
+        </div>
+        <div class="about">
+          <span class="form-header-about"> Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете
+            от работы у нас.</span>
+          <textarea name="чем привлекла работа" placeholder="Понравилась тем, что..." id="" cols="80" rows="10"
+            class="textarea-about"></textarea>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center; margin-bottom:75px;">
+          <button type="submit" class="btn"> Готово </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
